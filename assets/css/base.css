@@ -1,0 +1,177 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #766d6d;
+    --web-color: #d73324;
+    --header-height: 110px;
+    --navbar-height: 35px;
+    --header-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* reponsive */
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5pxpx;
+    margin-right: -5pxpx;
+}
+
+.grid-full-witdth {
+    width: 100%;
+}
+
+/* test */
+.grid__column-2 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+
+}
+
+.grid__column-2-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10 {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+
+}
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* select  */
+.select__input {
+    padding: 0 12px;
+    height: 28px;
+    border-radius: 3px;
+    background-color: var(--white-color);
+    min-width: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.select__input-laybal {
+    font-size: 1.3rem;
+}
+
+.select__input-laybal-icon {
+    font-size: 1.1rem;
+    color: #766d6d;
+}
+
+.select__input-list {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    list-style: none;
+    padding: 8px 16px;
+    display: none;
+}
+
+.select__input:hover .select__input-list {
+    display: block;
+}
+
+.select__input-item-link {
+    text-decoration: none;
+    padding: 4px 0;
+    display: block;
+    color: var(--black-color);
+    font-weight: 500;
+    font-size: 1.09rem
+}
+
+.select__input-item-link:hover {
+    color: var(--web-color);
+}
+
+/* phân trang */
+.phantrang {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+
+}
+
+.phantrang-item {
+    margin: 0 12px;
+
+}
+
+.phantrang-item-link {
+    text-decoration: none;
+    font-size: 1.6rem;
+    min-width: 40px;
+    height: 30px;
+    display: block;
+    color: rgb(80 73 73);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    font-weight: 400;
+    padding: 0;
+}
+
+.phantrang-item-link:hover {
+    background-color: #d3bebe;
+}
+
+.phantrang-item-icon {
+    color: #181616;
+}
+
+.phantrang-item-active .phantrang-item-link {
+    background-color: #d73324;
+    color: var(--white-color);
+
+}
+
+.phantrang-item-active .phantrang-item-link:hover {
+    filter: brightness(0.8);
+}
+
+.home__product-phantrang {
+    margin: 50px 0 34px 0;
+}
